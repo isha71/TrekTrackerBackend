@@ -70,21 +70,8 @@ TrekTracker is a web application that allows users to track their travels by mar
    `JWT_SECRET_TOKEN` = ""
    ```
 
-3. You need to set up the necessary tables in    your PostgreSQL database. Below are the SQL queries to create the required tables:
-    ```bash
-    CREATE TABLE users (
-        id SERIAL PRIMARY KEY,
-        username VARCHAR(255) NOT NULL UNIQUE,
-        password VARCHAR(255) NOT NULL
-    );
+3. You need to set up the necessary tables in your PostgreSQL database. Follow the provided queries.sql file to create the required tables:
 
-    CREATE TABLE users_visited_countries (
-        id SERIAL PRIMARY KEY,
-        user_id INTEGER NOT NULL REFERENCES users(id),
-        country_code VARCHAR(255),
-    );
-    ```
-   
 4.  Start the backend server:
    ```bash
    nodemon server.js
